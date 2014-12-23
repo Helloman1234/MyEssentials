@@ -1,0 +1,33 @@
+package me.Sizableshrimp0.main
+
+import org.bukkit.entity.Player;
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class CmdFly implements Listener{
+
+        public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){{
+                Player player = (Player) sender;
+                
+                if(commandLabel.equalsIgnoreCase("unban") || commandLabel.equalsIgnoreCase("munban") || commandLabel.equalsIgnoreCase("eunban") || commandLabel.equalsIgnoreCase("myunban")|| commandLabel.equalsIgnoreCase("meunban")){
+                            	if(player.hasPermission("MyEssentials.unban")){
+                            	if(args.length == 0){
+                            	//Player only typed /unban so lets unban them back
+                            		player.sendMessage(ChatColor.WHITE + "Usage: /Unban [Player]");
+                            	    }else{
+                            	    //Player typed some more
+                            	    	Player target = Bukkit.getPlayerExact(args[0]);
+                            	    	if (target == null) {
+                            	    		//Target is not online
+                            	    		Bukkit.getOfflinePlayer(args[0]).setBanned(false);
+                            	    		Bukkit.broadcastMessage(ChatColor.BLUE + sender.getName() + " has unbanned " + args[0]);
+                            	}}
+                            	}else{
+                            		player.sendMessage(ChatColor.DARK_RED + "You do not have permission!");
+                }
+                return true;
+                }
+        }}}
