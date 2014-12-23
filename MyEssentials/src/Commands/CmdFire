@@ -1,0 +1,38 @@
+package me.Sizableshrimp0.main
+
+import org.bukkit.entity.Player;
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class CmdFly implements Listener{
+
+        public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){{
+                Player player = (Player) sender;
+                
+                            else if(commandLabel.equalsIgnoreCase("fire") || commandLabel.equalsIgnoreCase("flame") || commandLabel.equalsIgnoreCase("mefire") || commandLabel.equalsIgnoreCase("myfire") || commandLabel.equalsIgnoreCase("mfire") || commandLabel.equalsIgnoreCase("efire")){
+                            	if(player.hasPermission("MyEssentials.fire")){
+                                if (args.length == 0){
+                                //Player only typed '/fire' so lets fire them back!
+                                	player.sendMessage(ChatColor.BLUE + "You have set yourself on fire!");
+                                	player.setFireTicks(300);
+                                    }else{
+                            	    //Player typed something more
+                            	    	Player target = Bukkit.getPlayerExact(args[0]);
+                            	    	if (target == null) {
+                            	    		//Target is not online
+                			    	    	player.sendMessage(ChatColor.DARK_RED + "Player "  + args[0] + " is not online!");
+                			    	        }else{
+                			    	    	//Targets online
+                			    	    	player.sendMessage(ChatColor.BLUE + "You have set " + args[0] + " on fire!");
+                                            target.sendMessage(ChatColor.DARK_RED + "You have been set on fire by " + sender.getName());
+                			    	    	target.setFireTicks(300);
+                            	}}	    
+                			   	}else{
+                			      	player.sendMessage(ChatColor.DARK_RED + "You do not have permission!");
+                }
+                return true;
+                }
+        }}}
