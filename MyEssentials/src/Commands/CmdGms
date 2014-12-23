@@ -12,8 +12,7 @@ public class CmdFly implements Listener{
         public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){{
                 Player player = (Player) sender;
                 
-                    }}
-            				if(commandLabel.equalsIgnoreCase("gms")|| commandLabel.equalsIgnoreCase("survival") || commandLabel.equalsIgnoreCase("megms")){
+                                    if(commandLabel.equalsIgnoreCase("gms")|| commandLabel.equalsIgnoreCase("survival") || commandLabel.equalsIgnoreCase("megms")){
             			        if(player.hasPermission("MyEssentials.gms")){
             			        if (args.length == 0){
             			        //Player only typed '/gms' so lets gms them back!
