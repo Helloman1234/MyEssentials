@@ -1,4 +1,4 @@
-package: me.Sizableshrimp0.main
+package me.Sizableshrimp0.main
 
 import org.bukkit.entity.Player;
 import org.bukkit.ChatColor;
