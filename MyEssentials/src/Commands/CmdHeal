@@ -12,8 +12,7 @@ public class CmdFly implements Listener{
         public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){{
                 Player player = (Player) sender;
                 
-                      }}
-            			    if(commandLabel.equalsIgnoreCase("Heal") || commandLabel.equalsIgnoreCase("meheal") || commandLabel.equalsIgnoreCase("mheal") || commandLabel.equalsIgnoreCase("eheal") || commandLabel.equalsIgnoreCase("myheal")|| commandLabel.equalsIgnoreCase("health")){ 
+                                    if(commandLabel.equalsIgnoreCase("Heal") || commandLabel.equalsIgnoreCase("meheal") || commandLabel.equalsIgnoreCase("mheal") || commandLabel.equalsIgnoreCase("eheal") || commandLabel.equalsIgnoreCase("myheal")|| commandLabel.equalsIgnoreCase("health")){ 
             			    	    if(player.hasPermission("MyEssentials.heal")){
             			    	    if (args.length == 0){
                     			    //Player only typed '/heal' so lets heal them back!
