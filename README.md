@@ -1,0 +1,4 @@
+MyEssentials
+============
+
+MyEssentials Bukkit Plugin!
