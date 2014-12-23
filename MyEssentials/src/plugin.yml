@@ -1,0 +1,111 @@
+name: MyEssentials
+version: R1.3
+main: me.Sizableshrimp0.main.MyEssentials
+description: Essentials plugin with great features!
+authors: [Sizableshrimp0]
+website: http://dev.bukkit.org/bukkit-plugins/myessentials/
+loadbefore: [Essentials]
+commands:
+  fly:
+    description: Turn fly on/off!
+    aliases: [mefly, efly, mfly, myfly, bird, flight]
+    usage: /<command>   
+  gmc:
+    description: Set GameMode to creative!
+    usage: /<command> [Player]
+    aliases: [creative, megmc]
+  gms: 
+    description: Set GameMode to survival!
+    aliases: [survival, megms]
+    usage: /<command> [Player] 
+  gma:
+    description: Set GameMode to adventure!
+    aliases: [adventure, megma]
+    usage: /<command> [Player]   
+  heal:
+    description: Heal player!
+    aliases: [meheal, mheal, eheal, myheal, health]
+    usage: /<command> [Player]
+  feed:
+    description: Feed player!
+    aliases: [mefeed, mfeed, efeed, myfeed, food]
+    usage: /<command> [Player]
+  air: 
+    description: Replenish your oxygen underwater!
+    aliases: [meair, mair, eair, myair, oxygen]
+    usage: /<command> 
+  fire:
+    description: Set players on fire!
+    aliases: [flame, mefire, myfire, mfire, efire]
+    usage: /<command> [Player]
+  ban:
+    description: Bans a player from the game!
+    aliases: [mban, eban, myban, meban]
+    usage: /<command> [Player]
+  unban: 
+    description: Unban a player from the game!
+    aliases: [munban, eunban, myunban, meunban]
+    usage: /<command> [Player]
+  kill:
+    description: Kill another player!
+    aliases: [mkill, ekill, mykill, mekill]
+    usage: /<command> [Player]
+  kick:
+    description: Kick players from the game!
+    aliases: [mkick, ekick, mykick, mekick]
+    usage: /<command> [Player]
+ 
+permissions:
+  MyEssentials.*:
+      default: op
+      description: Gives All Perms!
+      children:
+        MyEssentials.fly: true
+        MyEssentials.gmc: true
+        MyEssentials.gms: true
+        MyEssentials.gma: true
+        MyEssentials.heal: true
+        MyEssentials.feed: true
+        MyEssentials.air: true
+        MyEssentials.fire: true
+        MyEssentials.ban: true
+        MyEssentials.unban: true
+        MyEssentials.kill: true
+        MyEssentials.kick: true
+  MyEssentials.fly: 
+      default: op
+      description: Gives "/fly" perm!
+  MyEssentials.gmc:
+      default: op
+      description: Gives "/gmc" perm!
+  MyEssentials.gms:
+      default: op
+      description: Gives "/gms" perm!
+  MyEssentials.gma:
+      default: op
+      description: Gives "/gma" perm!
+  MyEssentials.heal:
+      default: op 
+      description: Gives "/heal" perm!
+  MyEssentials.feed:
+      default: op
+      description: Gives "/feed" perm!
+  MyEssentials.air:
+      default: op
+      description: Gives "/air" perm!
+  MyEssentials.fire:
+      default: op 
+      description: Gives "/fire" perm!
+  MyEssentials.ban:
+      default: op
+      description: Gives "/ban" perm!
+  MyEssentials.unban:
+      default: op 
+      description: Gives "/unban" perm!
+  MyEssentials.kill:
+      default: op
+      description: Gives "/kill" perm!
+  MyEssentials.kick:
+      default: op
+      description: Gives "/kick" perm!
+  
