@@ -1,0 +1,35 @@
+package me.Sizableshrimp0.main
+
+import org.bukkit.entity.Player;
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class CmdFly implements Listener{
+
+        public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){{
+                Player player = (Player) sender;
+                
+                            else if(commandLabel.equalsIgnoreCase("air") || commandLabel.equalsIgnoreCase("meair") || commandLabel.equalsIgnoreCase("mair") || commandLabel.equalsIgnoreCase("eair") || commandLabel.equalsIgnoreCase("myair") || commandLabel.equalsIgnoreCase("oxygen")){
+                            	if(player.hasPermission("MyEssentials.air")){
+                            	if (args.length == 0){
+                            	//Player only typed '/air' so lets air them back!
+                            		Location l = player.getLocation();
+                            		l.setY(l.getY() + 1);
+                            		Block b = l.getBlock();
+                            		if(b.isLiquid()) {
+                            		//in water
+                            		player.sendMessage(ChatColor.BLUE + "You have replenished your supply of oxygen!");
+                            		player.setRemainingAir(300);
+                            	    }else{
+                            		//not in water
+                            		player.sendMessage(ChatColor.BLUE + "You are not in water!");
+                        		}}
+                            	}else{
+                            		player.sendMessage(ChatColor.DARK_RED + "You do not have permission!");
+                }
+                return true;
+                }
+        }}}
