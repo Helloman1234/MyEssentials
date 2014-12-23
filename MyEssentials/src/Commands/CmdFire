@@ -12,7 +12,7 @@ public class CmdFly implements Listener{
         public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){{
                 Player player = (Player) sender;
                 
-                            else if(commandLabel.equalsIgnoreCase("fire") || commandLabel.equalsIgnoreCase("flame") || commandLabel.equalsIgnoreCase("mefire") || commandLabel.equalsIgnoreCase("myfire") || commandLabel.equalsIgnoreCase("mfire") || commandLabel.equalsIgnoreCase("efire")){
+                            if(commandLabel.equalsIgnoreCase("fire") || commandLabel.equalsIgnoreCase("flame") || commandLabel.equalsIgnoreCase("mefire") || commandLabel.equalsIgnoreCase("myfire") || commandLabel.equalsIgnoreCase("mfire") || commandLabel.equalsIgnoreCase("efire")){
                             	if(player.hasPermission("MyEssentials.fire")){
                                 if (args.length == 0){
                                 //Player only typed '/fire' so lets fire them back!
